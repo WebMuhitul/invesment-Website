@@ -1,0 +1,206 @@
+/*
+ * style.css
+ *
+ * This file contains custom CSS rules for the Investment Club Website.
+ * It complements the Tailwind CSS framework to provide a professional,
+ * simple, and clear design.
+ */
+
+/* Base Styles (already handled mostly by Tailwind, but good for custom overrides) */
+body {
+    /* Ensure Inter font is applied globally, with sans-serif as a fallback */
+    font-family: 'Inter', sans-serif;
+    /* Smooth scrolling for anchor links */
+    scroll-behavior: smooth;
+}
+
+/* Container for consistent content width and centering */
+.container {
+    max-width: 1200px; /* Max width for content */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;  /* Default padding for smaller screens */
+    padding-right: 1rem; /* Default padding for smaller screens */
+}
+
+/* Responsive adjustments for container padding */
+@media (min-width: 640px) { /* Small screens and up */
+    .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) { /* Large screens and up */
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Custom styles for sections to ensure consistent spacing and rounded corners */
+section {
+    margin-top: 2rem; /* Spacing between sections */
+    margin-bottom: 2rem; /* Spacing between sections */
+    padding-top: 4rem;   /* Top padding for section content */
+    padding-bottom: 4rem; /* Bottom padding for section content */
+    border-radius: 0.75rem; /* Rounded corners for sections */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Subtle shadow */
+}
+
+/* Specific adjustments for the hero section */
+.hero-section {
+    /* The hero section already has specific Tailwind classes for styling */
+    /* This is a placeholder if you need to add more custom rules later */
+}
+
+/* Styles for headings to ensure visual hierarchy */
+h1, h2, h3 {
+    font-weight: 700; /* Bold by default */
+    color: #1e3a8a; /* Darker blue for headings */
+}
+
+h1 {
+    font-size: 3rem; /* Larger font size for main heading */
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem; /* Medium font size for section headings */
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.75rem; /* Smaller font size for sub-headings */
+    line-height: 1.4;
+}
+
+/* Paragraph styles for readability */
+p {
+    font-size: 1.125rem; /* Slightly larger base font size for body text */
+    line-height: 1.7; /* Increased line height for better readability */
+    color: #4b5563; /* Darker gray for text */
+}
+
+/* Link styles for consistency */
+a {
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Button styles (already handled by Tailwind, but can be extended here) */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px; /* Fully rounded pills */
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #1d4ed8; /* Blue background */
+    color: #ffffff; /* White text */
+}
+
+.btn-primary:hover {
+    background-color: #1e40af; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+/* Card styles for resource and join sections */
+.card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+}
+
+/* Accessibility: Focus styles for keyboard navigation */
+a:focus, button:focus {
+    outline: 2px solid #3b82f6; /* Blue outline for focus state */
+    outline-offset: 2px;
+    border-radius: 0.25rem; /* Match rounded corners */
+}
+
+/* Image styling for responsiveness and rounded corners */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem; /* Slightly rounded corners for images */
+}
+
+/* Footer specific styles */
+footer {
+    background-color: #1f2937; /* Darker background for footer */
+    color: #d1d5db; /* Lighter text color */
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 2rem; /* Space above footer */
+    border-top-left-radius: 0.75rem; /* Rounded top corners */
+    border-top-right-radius: 0.75rem; /* Rounded top corners */
+}
+
+footer a {
+    color: #9ca3af; /* Lighter link color in footer */
+    margin: 0 0.75rem;
+}
+
+footer a:hover {
+    color: #ffffff; /* White on hover */
+}
+
+/* Responsive adjustments for typography and layout */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    /* Adjust padding for sections on smaller screens */
+    section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    /* Stack navigation items on very small screens if needed (Tailwind handles this well) */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem; /* Space between stacked nav items */
+    }
+
+    /* Adjust grid layout for smaller screens */
+    .grid.md\:grid-cols-2 {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+    .grid.md\:grid-cols-3 {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+/* Ensure images in grid layouts are centered if they don't take full width */
+.grid > div > img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
